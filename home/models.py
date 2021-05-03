@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+
+class Imagemodel(models.Model):
+    faceimg=models.ImageField(upload_to="testing/images")

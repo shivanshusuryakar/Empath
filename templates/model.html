@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Empath Working Model</title>
+</head>
+<body>
+<!--<form method="post"  enctype="multipart/form-data">-->
+<!--{% csrf_token %}-->
+<!--    {{ form.as_p }}-->
+<!--    <button type="submit">Upload Image</button>-->
+<!--</form>-->
+<section>
+    <h3>Upload your files here </h3>
+    <form method="POST" class="post-form" enctype="multipart/form-data" action="result">
+        {% csrf_token %}
+        <label for=""></label>
+        <input type="file" accept="docx" name="inpfile">
+        <button type="submit">Upload !</button>
+    </form>
+
+   </section>
+</body>
+</html>
