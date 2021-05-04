@@ -1,6 +1,64 @@
 {% extends 'base.html' %}
 {% block body %}
+<style>
 
+.button {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  text-shadow: 0 -2px 0 rgb(222,112,153), 0 1px 1px rgb(219,94,140);
+  box-sizing: border-box;
+  font-size: 2em;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(114,18,35);
+  height: 65px;
+  line-height: 65px;
+  padding: 0 32.5px;
+  display: inline-block;
+  width: auto;
+  background: linear-gradient(to bottom, rgb(243,46,105) 0%, rgb(245,95,120) 26%, rgb(247,106,149) 100%);
+  border-radius: 5px;
+  border-top: 1px solid rgb(233,109,131);
+  border-bottom: 1px solid rgb(103,16,31);
+  top: 0;
+  transition: all 0.06s ease-out;
+  position: relative;
+}
+.button:visited {
+  color: rgb(243,75,172);
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, rgb(224,44,94) 0%, rgb(224,44,94) 26%, rgb(183,26,77) 100%);
+}
+
+.button:active {
+  top: 6px;
+  text-shadow: 0 -2px 0 rgb(168,21,69), 0 1px 1px rgb(168,21,69), 0 0 4px white;
+  color: white;
+}
+.button:active:before {
+  top: 0;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7), 0 3px 9px rgba(0, 0, 0, 0.2);
+}
+
+.button:before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 6px;
+  border-radius: 5px;
+  height: 65px;
+  background: linear-gradient(to top, rgb(163,37,84) 0%, rgb(187,43,97) 6px);
+  transition: all 0.078s ease-out;
+  box-shadow: 0 1px 0 2px rgba(0, 0, 0, 0.3), 0 5px 2.4px rgba(0, 0, 0, 0.5), 0 10.8px 9px rgba(0, 0, 0, 0.2);
+}
+</style>
 <div id="home" class="slider">
             <ul class="slides">
                 <li>
@@ -11,9 +69,12 @@
                             <p>Your file has successfully uploaded!</p>
                             <form action="Calculate">
                                 {% csrf_token %}
-                                <button type="submit">Calculate</button>
+                                <button type="submit" class="button"><span>Calculate</span></button>
                             </form>
-                            {{OUTSTRING}}
+                            <div style="background-color:black;border:2px solid white;border-radius:25%;margin-top:20px;">
+                            <h2 style="color:rgb(231,65,123);padding:10px;text-shadow:1px 2px 3px grey">{{OUTSTRING}}</h2>
+
+                            </div>
                         </div>
                     </div>
                 </li>
