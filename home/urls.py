@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns=[
     path("",views.index,name="index"),
-    path("model",views.modelform,name="model"),
+    path("model",views.modelform,name="modelform"),
     path("result",views.result,name="result"),
 ]
 

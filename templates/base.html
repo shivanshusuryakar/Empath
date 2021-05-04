@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--<meta http-equiv="x-ua-compatible" content="ie=edge">-->
 
-        <title>Adventurer – One Page Creative HTML5 Page Template</title>
+        <title>Empath- A Smart Feedback Assistant</title>
 
         <!-- Font Awesome -->
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,300,300italic,700' rel='stylesheet' type='text/css'>
@@ -54,22 +54,22 @@
                     <!--Links-->
                     <ul class="nav navbar-nav pull-right hidden-md-down text-uppercase">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{% url 'index' %}" >Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="{% url 'index' %}#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#service">Service</a>
+                            <a class="nav-link" href="{% url 'index' %}">#serviceService</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#team">Team</a>
+                            <a class="nav-link" href="{% url 'index' %}#team">Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                            <a class="nav-link" href="{% url 'index' %}#portfolio">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#newsletter">Faq</a>
+                            <a class="nav-link" href="{% url 'index' %}#about">Faq</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" target="_blank" href="#!"><i class="fa fa-search fa-lg"></i></a>
@@ -83,22 +83,22 @@
 
                     <ul class="side-nav" id="mobile-menu">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="{% url 'index' %}#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#service">Service</a>
+                            <a class="nav-link" href="{% url 'index' %}#service" >Service</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">portfolio</a>
+                            <a class="nav-link" href="{% url 'index' %}#portfolio">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#newsletter">Support</a>
+                            <a class="nav-link" href="{% url 'index' %}#newsletter" >Support</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#!">Faq</a>
+                            <a class="nav-link" href="{% url 'index' %}#about">Faq</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#!"><i class="fa fa-search fa-lg"></i></a>
@@ -110,50 +110,6 @@
         <!--/.Navbar-->
 
 
-        <div id="home" class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="static/img/homebenner.jpg"> <!-- random image -->
-                    <div class="caption center-align">
-                        <div class="single_home">
-                            <h1>EMPATH-AI</h1>
-                            <p>A SMART AI FEEDBACK ASSISTANT</p>
-                            <button type="button" class="btn btn-danger m-t-3 waves-effect waves-red">See More</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <img src="static/img/homebenner.jpg"> <!-- random image -->
-                    <div class="caption center-align">
-                        <div class="single_home">
-                            <h1>EMPATH-AI</h1>
-                            <p>A SMART AI FEEDBACK ASSISTANT</p>
-                            <button type="button" class="btn btn-danger m-t-3 waves-effect waves-red">See More</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <img src="static/img/homebenner.jpg"> <!-- random image -->
-                    <div class="caption center-align">
-                        <div class="single_home">
-                            <h1>EMPATH-AI</h1>
-                            <p>A SMART AI FEEDBACK ASSISTANT</p>
-                            <button type="button" class="btn btn-danger m-t-3 waves-effect waves-red">See More</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <img src="static/img/homebenner.jpg"> <!-- random image -->
-                    <div class="caption center-align">
-                        <div class="single_home">
-                            <h1>EMPATH-AI</h1>
-                            <p>A SMART AI FEEDBACK ASSISTANT</p>
-                            <button type="button" class="btn btn-danger m-t-3 waves-effect waves-red">See More</button>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
 
 
 
@@ -161,774 +117,10 @@
 
 
 
-        <section id="about" class="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="main_about_area">
-                            <div class="head_title center m-y-3 wow fadeInUp">
-                                <h2>Who we are</h2>
-                                <b><p>We are Team Dynamic Dudes providing AI-Solutions to Industries</p></b>
-                            </div>
 
-                            <div class="main_about_content">
-                                <div class="row">
-                                    <div class="col-md-6">
+        {% block body %}
 
-                                        <div class="main_accordion wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-
-                                            <div class="single_accordion">
-                                                <button class="accordion">What is Empath-AI?</button>
-                                                <div class="panel">
-                                                    <p>Empath means expression of feelings and emotions.We have given this name to
-                                                        our project because it is strongly connected with feelings and emotions.This AI Assistant 
-                                                        will help us to take feedback from user by taking their facial expression into consideration.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="single_accordion">
-                                                <button class="accordion active">How is Empath Build?</button>
-                                                <div class="panel show">
-                                                    <p>Empath has a base of Machine Learning.Face recognition,Landmarks detection models helped 
-                                                        Empath to interact with Humans and based on several Machine learning ALgorithms Empath calculates
-                                                        the Feedback of User in the Backend.It learns fom Experience!
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="single_accordion">
-                                                <button class="accordion">How was Empath Born?</button>
-                                                <div class="panel">
-                                                    <p>The idea came into mind of the creators when they had seen that nowadays Feedbacks aren't Honest enough 
-                                                        and people give fake feebacks;also when Feedbacks are taken it takes much of the time being a manual work
-                                                    so We have thought of making all of this Automatic.Hence,Empath was born!
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="single_about about_progress">
-                                            <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-                                                <!-- progress start -->
-                                                <div class="progress">
-                                                    <div class="lead">FrontEnd  95%</div>
-                                                    <div class="progress-bar wow fadeInLeft" data-progress="95%" style="width: 95%;" data-wow-duration="1.5s" data-wow-delay="1.2s"></div>
-                                                </div>
-                                                <!-- progress end -->
-                                                <!-- progress start -->
-                                                <div class="progress">
-                                                    <div class="lead">Face Recognition Model 90%</div>
-                                                    <div class="progress-bar wow fadeInLeft" data-progress="90%" style="width: 90%;" data-wow-duration="1.5s" data-wow-delay="1.2s"></div>
-                                                </div>
-                                                <!-- progress end -->
-                                                <!-- progress start -->
-                                                <div class="progress">
-                                                    <div class="lead">Landmark Detection Model 85%</div>
-                                                    <div class="progress-bar wow fadeInLeft" data-progress="85%" style="width: 85%;" data-wow-duration="1.5s" data-wow-delay="1.2s"></div>
-                                                </div>
-                                                <!-- progress end -->
-                                                <!-- progress start -->
-                                                <div class="progress">
-                                                    <div class="lead">BackEnd-Django 80%</div>
-                                                    <div class="progress-bar wow fadeInLeft" data-progress="80%" style="width: 80%;" data-wow-duration="1.5s" data-wow-delay="1.2s"></div>
-                                                </div>
-                                                <!-- progress end -->
-                                                <!-- progress start -->
-                                                <div class="progress">
-                                                    <div class="lead">Neural Networks 70%</div>
-                                                    <div class="progress-bar wow fadeInLeft" data-progress="70%" style="width: 70%;" data-wow-duration="1.5s" data-wow-delay="1.2s"></div>
-                                                </div>
-                                                <!-- PROGRESS END -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr />
-            <br />
-            <br />
-            <br />
-            <hr />
-        </section><!-- End of About Section-->
-
-
-
-        <section id="service" class="service">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="main_service_area">
-                            <div class="head_title center m-y-3 wow fadeInUp">
-                                <h2>Our Service</h2>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="jumbotron single_service  wow fadeInLeft">
-                                        <div class="service_icon center">
-                                            <i class="fa fa-cog m-b-3"></i>
-                                        </div>
-                                        <div class="s_service_text text-sm-center text-xs-center">
-                                            <h4>Free Support and Updates</h4>
-                                            <p>We provide free support for people around the Globe for our Smart Feedback Assistant.
-                                            Whenever updated User will get notified at the speed of Light!
-                                            </p>
-                                        </div>
-
-                                        <div class="service_btn center">
-                                            <a href="#!" class="btn btn-danger waves-effect waves-red">See  More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="jumbotron single_service wow fadeInUp">
-                                        <div class="service_icon center">
-                                            <i class="fa fa-pied-piper m-b-3"></i>
-                                        </div>
-                                        <div class="s_service_text text-sm-center text-xs-center">
-                                            <h4>Fully customisable</h4>
-                                            <p>This app is not specific to certain domain of users,this is why it can be customised 
-                                                according to User's necessity.ex-For Personal use,Teaching, Hotels, Interviews Feedbacks,etc.
-                                            </p>
-                                        </div>
-
-                                        <div class="service_btn center">
-                                            <a href="#!" class="btn btn-danger waves-effect waves-red">See  More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="jumbotron single_service wow fadeInRight">
-                                        <div class="service_icon center">
-                                            <i class="fa fa-plug m-b-3"></i>
-                                        </div>
-                                        <div class="s_service_text text-sm-center  text-xs-center">
-                                            <h4>Device Compatibility</h4>
-                                            <p>The Smart Feedback Assistant is not a platform specific model.Our Website is already launched and we will extend this to Mobile and Desktop Applications that you will be able to download!
-                                            </p>
-                                        </div>
-
-                                        <div class="service_btn center">
-                                            <a href="#!" class="btn btn-danger waves-effect waves-red">See  More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr />
-        </section> <!-- End of service section -->
-
-
-
-        <section id="joinus" class="joinus">
-            <div class="main_joinus_area m-y-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="main_joinus_content center white-text wow fadeInUp">
-                                <i class="fa fa-user-plus m-b-1"></i>
-                                <h2 class="text-uppercase m-b-3">Join Our community</h2>
-                                <p>“ Hey Fella,We want to extend this communnity for the sake of Public enrollment in AI.So join us for this
-                                    wonderful Event.(Beta Access to be given for community people only)”</p>
-
-                                <a href="#!" class="btn btn-danger waves-effect waves-red">Join with us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr />
-        </section> <!-- End of JoinUs section -->
-
-
-
-
-        <section id="offer" class="offer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="main_offer_area">
-                            <div class="head_title center m-y-3  wow fadeInUp">
-                                <h2>What we Offer</h2>
-                            </div>
-                            <div class="main_offer_content m-b-3  wow fadeInUp">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="single_offer m-t-3">
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <div class="single_offer_icon">
-                                                        <i class="fa fa-cloud"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-9">
-                                                    <div class="single_offer_text">
-                                                        <h3>feedback analysis</h3>
-                                                        <p>We provide the Feedback analysis to users for their specific tasks.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                        <div class="single_offer m-t-3">
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <div class="single_offer_icon">
-                                                        <i class="fa fa-line-chart"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-9">
-                                                    <div class="single_offer_text">
-                                                        <h3>Statistical Analysis</h3>
-                                                        <p>Statistical analysis of the Feedback and emotions recogised by our model can be shown in a beautiful way.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single_offer m-t-3">
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <div class="single_offer_icon">
-                                                        <i class="fa fa-cart-arrow-down"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-9">
-                                                    <div class="single_offer_text">
-                                                        <h3>Premium Service</h3>
-                                                        <p>This service include paid membership for those Users who want to create customised Feedback Assistant fot themselves.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single_offer m-t-3">
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <div class="single_offer_icon">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-9">
-                                                    <div class="single_offer_text">
-                                                        <h3>full fledged support</h3>
-                                                        <p>For any technical assistance you can Contact our Team and we will get back to you to  resolve your problem as soon as possible.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr />
-        </section><!-- End of Offer Section -->
-
-        <section id="client" class="client">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="main_client_area">
-                            <div class="head_title center m-y-3 wow fadeInUp">
-                                <h2>CUSTOMER REVIEWS</h2>
-                            </div>
-                            <div class="main_client_content m-b-3">
-
-                                <div class="carousel carousel-slider">
-                                    <div class="carousel-item" >
-                                        <div class="single_client_area">
-                                            <div class="single_client">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="single_c_img center">
-                                                            <img class="img-circle" src="static/img/gurunath.jpg" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="single_c_text text-md-left text-xs-center">
-                                                            <h3>Gurunath Subhedar</h3>
-                                                            <span class="text-uppercase m-b-1">Former CEO-Radhika Masale</span>
-                                                            <p>“ I have been using this Feedback Assistant for my Wife's company and the results were outstaning.
-                                                                Thanks Shivanshu!”......</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="single_client">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="single_c_img center">
-                                                            <img class="img-circle" src="static/img/asawari.jpg" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="single_c_text text-md-left text-xs-center">
-                                                            <h3>Asawari Dadarkar</h3>
-                                                            <span class="text-uppercase m-b-1">Mother of babdya</span>
-                                                            <p>“ I have used this app to check whether there are any changes in my Son's behaviour and the results were very accurate. 
-                                                                Finally he is good now and I am starting a new serial”.......</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- End of carouser item -->
-                                    <div class="carousel-item">
-                                        <div class="single_client_area">
-                                            <div class="single_client">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="single_c_img center">
-                                                            <img class="img-circle" src="static/img/saumitra.jpg" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="single_c_text text-md-left text-xs-center">
-                                                            <h3>Saumitra</h3>
-                                                            <span class="text-uppercase m-b-1">Straight from America</span>
-                                                            <p>“This Assistant really helped me to get to know my childhood Bestfriend Radhika,Thanks Team Dynamic Dudes. 
-                                                                After that we have merged our company together and now I work as son of Asawari!”.......</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="single_client">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="single_c_img center">
-                                                            <img class="img-circle" src="static/img/abhijeet.jpg" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="single_c_text text-md-left text-xs-center">
-                                                            <h3>Abhijeet Raje</h3>
-                                                            <span class="text-uppercase m-b-1">Master Chef Thane</span>
-                                                            <p>“ I run a hotel and I used this app to know about satisfaction of my customers.This worked really well. 
-                                                                One day Asawari came in my Hotel and I recorded her reaction,turned out that she was liking my dishes. 
-                                                                Thank you Shivanshu!”.......</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- End of carouser item -->
-                                    <div class="carousel-item" >
-                                        <div class="single_client_area">
-                                            <div class="single_client">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="single_c_img center">
-                                                            <img class="img-circle" src="static/img/gurunath.jpg" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="single_c_text text-md-left text-xs-center">
-                                                            <h3>Gurunath Subhedar</h3>
-                                                            <span class="text-uppercase m-b-1">Former CEO-Radhika Masale</span>
-                                                            <p>“ I have been using this Feedback Assistant for my Wife's company and the results were outstaning.
-                                                                Thanks Shivanshu!”......</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="single_client">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="single_c_img center">
-                                                            <img class="img-circle" src="static/img/asawari.jpg" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="single_c_text text-md-left text-xs-center">
-                                                            <h3>Asawari Dadarkar</h3>
-                                                            <span class="text-uppercase m-b-1">Mother of babdya</span>
-                                                            <p>“ I have used this app to check whether there are any changes in my Son's behaviour and the results were very accurate. 
-                                                                Finally he is good now and I am starting a new serial”.......</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- End of carouser item -->
-                                    <div class="carousel-item">
-                                        <div class="single_client_area">
-                                            <div class="single_client">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="single_c_img center">
-                                                            <img class="img-circle" src="static/img/saumitra.jpg" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="single_c_text text-md-left text-xs-center">
-                                                            <h3>Saumitra</h3>
-                                                            <span class="text-uppercase m-b-1">Straight from America</span>
-                                                            <p>“This Assistant really helped me to get to know my childhood Bestfriend Radhika,Thanks Team Dynamic Dudes. 
-                                                                After that we have merged our company together and now I work as son of Asawari!”.......</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="single_client">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="single_c_img center">
-                                                            <img class="img-circle" src="static/img/abhijeet.jpg" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="single_c_text text-md-left text-xs-center">
-                                                            <h3>Abhijeet Raje</h3>
-                                                            <span class="text-uppercase m-b-1">Master Chef Thane</span>
-                                                            <p>“ I run a hotel and I used this app to know about satisfaction of my customers.This worked really well. 
-                                                                One day Asawari came in my Hotel and I recorded her reaction,turned out that she was liking my dishes. 
-                                                                Thank you Shivanshu!”.......</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div><!-- End of carouser item -->
-                                </div><!-- End of carouser slider -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr />
-        </section><!-- End of client Section -->
-
-
-        <section id="counter" class="counter">
-
-            <div class="main_counter_area m-y-3">
-                <div class="overlay p-y-3">
-                    <div class="container">
-                        <div class="row">
-                            <div class="main_counter_content center white-text wow fadeInUp">
-                                <div class="col-md-3">
-                                    <div class="single_counter p-y-2 m-t-1">
-                                        <i class="fa fa-heart m-b-1"></i>
-                                        <h2 class="statistic-counter">100</h2>
-                                        <p>Love Our Team</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="single_counter p-y-2 m-t-1">
-                                        <i class="fa fa-check m-b-1"></i>
-                                        <h2 class="statistic-counter">400</h2>
-                                        <p>Checked Our Services</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="single_counter p-y-2 m-t-1">
-                                        <i class="fa fa-refresh m-b-1"></i>
-                                        <h2 class="statistic-counter">312</h2>
-                                        <p>Repeated clients</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="single_counter p-y-2 m-t-1">
-                                        <i class="fa fa-beer m-b-1"></i>
-                                        <h2 class="statistic-counter">480</h2>
-                                        <p>Customer Satisfaction</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr />
-        </section><!-- End of counter Section -->
-
-
-
-        <section id="team" class="team">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="main_team_area m-y-3">
-                            <div class="head_title center  wow fadeInUp">
-                                <h2>Meet Our Team</h2>
-                                <p>This is our Team Dynamic who are also the creators of the Empath-AI Feedback Assitant.</p>
-                            </div>
-
-                            <div class="main_team_content center">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="single_team white-text m-t-2 wow zoomIn">
-                                            <img src="static/img/team1.jpg" alt="team" />
-                                            <div class="single_team_overlay">
-                                                <h4>Gurunath Subhedar</h4>
-                                                <p>Former CEO-Radhika Masale</p>
-                                                <div class="team_socail">
-                                                    <a href="#!"><i class="fa fa-facebook"></i></a>
-                                                    <a href="#!"><i class="fa fa-twitter"></i></a>
-                                                    <a href="#!"><i class="fa fa-pinterest-p"></i></a>
-                                                    <a href="#!"><i class="fa fa-dribbble"></i></a>
-                                                    <a href="#!"><i class="fa fa-behance"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="single_team white-text m-t-2 wow zoomIn">
-                                            <img src="static/img/team2.jpg" alt="team" />
-                                            <div class="single_team_overlay">
-                                                <h4>Asawari Dadarkar</h4>
-                                                <p>Mother-India</p>
-                                                <div class="team_socail">
-                                                    <a href="#!"><i class="fa fa-facebook"></i></a>
-                                                    <a href="#!"><i class="fa fa-twitter"></i></a>
-                                                    <a href="#!"><i class="fa fa-pinterest-p"></i></a>
-                                                    <a href="#!"><i class="fa fa-dribbble"></i></a>
-                                                    <a href="#!"><i class="fa fa-behance"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="single_team white-text m-t-2 wow zoomIn">
-                                            <img src="static/img/team3.jpg" alt="team" />
-                                            <div class="single_team_overlay">
-                                                <h4>Saumitra</h4>
-                                                <p>CEO-American Masale Company</p>
-                                                <div class="team_socail">
-                                                    <a href="#!"><i class="fa fa-facebook"></i></a>
-                                                    <a href="#!"><i class="fa fa-twitter"></i></a>
-                                                    <a href="#!"><i class="fa fa-pinterest-p"></i></a>
-                                                    <a href="#!"><i class="fa fa-dribbble"></i></a>
-                                                    <a href="#!"><i class="fa fa-behance"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="single_team white-text m-t-2 wow zoomIn">
-                                            <img src="static/img/team4.jpg" alt="team" />
-                                            <div class="single_team_overlay">
-                                                <h4>Abhijeet Raje</h4>
-                                                <p>Masterchef Dadar</p>
-                                                <div class="team_socail">
-                                                    <a href="#!"><i class="fa fa-facebook"></i></a>
-                                                    <a href="#!"><i class="fa fa-twitter"></i></a>
-                                                    <a href="#!"><i class="fa fa-pinterest-p"></i></a>
-                                                    <a href="#!"><i class="fa fa-dribbble"></i></a>
-                                                    <a href="#!"><i class="fa fa-behance"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- End of col-sm-3 -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr />
-        </section><!-- End of Team section -->
-
-
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="main_portfolio_area m-y-3">
-                        <div class="head_title center wow fadeInUp">
-                            <h2>Our Awesome Works</h2>
-                            <p>We have provided many services to our customers along with premium services for  customised Models .</p>
-                        </div>
-
-                        <div class="main_portfolio_content center wow fadeInUp">
-                            <div class="main_mix_menu m-y-2">
-                                <ul class="text-uppercase">
-                                    <li class="filter" data-filter="all">All</li>
-                                    <li class="filter" data-filter=".cat1">Photography</li>
-                                    <li class="filter" data-filter=".cat2">Graphic</li>
-                                    <li class="filter" data-filter=".cat3">Print</li>
-                                    <li class="filter" data-filter=".cat4">Web</li>
-                                </ul>
-                            </div>
-
-                            <div id="mixcontent" class="mixcontent  wow zoomIn">
-                                <div class="col-md-4 mix cat4 cat2">
-                                    <div class="single_mixi_portfolio center">
-                                        <div class="single_portfolio_img">
-                                            <img src="static/img/pf1.jpg" alt="" />
-                                            <div class="mixi_portfolio_overlay">
-                                                <a href="#!"><i class="fa fa-search"></i></a>
-                                                <a href="static/img/pf1.jpg" class="gallery-img"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="single_portfolio_text">
-                                            <h3>Empath-App</h3>
-                                            <p>It is the most used Website as per the census</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mix cat4 cat1">
-                                    <div class="single_mixi_portfolio center">
-                                        <div class="single_portfolio_img">
-                                            <img src="static/img/pf2.jpg" alt="" />
-                                            <div class="mixi_portfolio_overlay">
-                                                <a href="#!"><i class="fa fa-search"></i></a>
-                                                <a href="static/img/pf2.jpg" class="gallery-img"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="single_portfolio_text">
-                                            <h3>Premium service</h3>
-                                            <p>This is premium services which are provided to premium members only</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mix cat2 cat4">
-                                    <div class="single_mixi_portfolio center">
-                                        <div class="single_portfolio_img">
-                                            <img src="static/img/pf3.jpg" alt="" />
-                                            <div class="mixi_portfolio_overlay">
-                                                <a href="#!"><i class="fa fa-search"></i></a>
-                                                <a href="static/img/pf3.jpg" class="gallery-img"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="single_portfolio_text">
-                                            <h3>Customised model for PUMA</h3>
-                                            <p>We had also provided our custommised model to PUMA which was used to note customer satisfaction</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mix cat2 cat3">
-                                    <div class="single_mixi_portfolio center">
-                                        <div class="single_portfolio_img">
-                                            <img src="static/img/pf4.jpg" alt="" />
-                                            <div class="mixi_portfolio_overlay">
-                                                <a href="#!"><i class="fa fa-search"></i></a>
-                                                <a href="static/img/pf4.jpg" class="gallery-img"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="single_portfolio_text">
-                                            <h3>Our Work Image 06</h3>
-                                            <p>Other works</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mix cat3 cat4">
-                                    <div class="single_mixi_portfolio center">
-                                        <div class="single_portfolio_img">
-                                            <img src="static/img/pf5.jpg" alt="" />
-                                            <div class="mixi_portfolio_overlay">
-                                                <a href="#!"><i class="fa fa-search"></i></a>
-                                                <a href="static/img/pf5.jpg" class="gallery-img"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="single_portfolio_text">
-                                            <h3>Our Work Image 06</h3>
-                                            <p>Other works</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mix cat1 cat3">
-                                    <div class="single_mixi_portfolio center">
-                                        <div class="single_portfolio_img">
-                                            <img src="static/img/pf6.jpg" alt="" />
-                                            <div class="mixi_portfolio_overlay">
-                                                <a href="#!"><i class="fa fa-search"></i></a>
-                                                <a href="static/img/pf6.jpg" class="gallery-img"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="single_portfolio_text">
-                                            <h3>Judge Feedback</h3>
-                                            <p>We had provided a model for noting Feedbacks of Judges for a drawing competetion which expressed their honest reviews on drawings. </p>
-                                        </div>
-                                    </div>
-                                </div><!-- End of col-md-4 -->
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr />
-        </section><!-- End of Portfolio Section -->
-
-
-
-        <section id="works" class="works">
-            <div class="container">
-                <div class="row">
-                    <div class="main_works_area center m-y-3">
-                        <div class="head_title center  wow fadeInUp">
-                            <h2>Our Awesome Works</h2>
-                        </div>
-
-                        <div class="main_works_content p-y-3">
-                            <div class="col-md-3">
-                                <div class="single_works wow zoomIn">
-                                    <img src="static/img/works1.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="single_works wow zoomIn">
-                                    <img src="static/img/works2.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="single_works wow zoomIn">
-                                    <img src="static/img/works3.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="single_works wow zoomIn">
-                                    <img src="static/img/works4.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr />
-        </section><!-- End of works Section -->
-
-
-        <section id="newsletter" class="newsletter">
-            <div class="container">
-                <div class="row">
-                    <div class="main_newsletter white-text p-y-2 m-t-3">
-                        <div class="col-md-6 col-sm-12 col-xs-12">
-                            <div class="single_newsletter left m-t-1 text-md-left text-sm-center text-xs-center wow zoomIn">
-                                <p>Subscribe to our newsletter to get every Notify</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12">
-                            <div class="single_newsletter text-md-right text-sm-center wow zoomIn">
-                                <div class="md-form input-group">
-                                    <input type="text" class="form-control" placeholder="Search for...">
-                                    <span class="input-group-btn">
-                                        <button class="btn waves-effect waves-red" type="button"><i class="fa fa-send"></i></button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End of Newsletter section -->
+        {% endblock body %}
 
 
 
@@ -936,12 +128,12 @@
             <div class="container">
                 <div class="row">
                     <div class="main_footer_area white-text p-b-3">
-                        <div class="col-md-3">
+                        <div class="col-md-4 ">
                             <div class="single_f_widget p-t-3 wow fadeInUp">
                                 <img src="static/img/logo.png" alt="" />
                                 <div class="single_f_widget_text">
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                                        The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
+                                    <p>Out Team- Dynamic has made this model to take honest feedbacks from people based on their facial expression and taking that into consideration we give a detailed statistical analysis of the feedback
+                                    over the Event.</p>
                                     <div class="socail_f_widget">
                                         <a href="#!" ><i class="fa fa-facebook"></i></a>
                                         <a href="#!" ><i class="fa fa-google-plus"></i></a>
@@ -952,45 +144,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="single_f_widget m-t-3 wow fadeInUp">
-                                <h4 class="text-lowercase">Some features</h4>
+                                <h4 class="text-lowercase">Some Features</h4>
                                 <div class="single_f_widget_text f_reatures">
                                     <ul>
-                                        <li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet</li>
-                                        <li><i class="fa fa-check"></i>Aliquam tincidunt cons ectetuer</li>
-                                        <li><i class="fa fa-check"></i>Vestibulum auctor dapibus con</li>
-                                        <li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet auctor dapibus</li>
+                                        <li><i class="fa fa-check"></i>Honest Reviews</li>
+                                        <li><i class="fa fa-check"></i>Unbiased Feedbacks</li>
+                                        <li><i class="fa fa-check"></i>Expression recognizer</li>
+                                        <li><i class="fa fa-check"></i>Customisable Model</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="single_f_widget m-t-3 wow fadeInUp">
                                 <h4 class="text-lowercase">Tags</h4>
                                 <div class="single_f_widget_text f_tags">
-                                    <a href="#!">corporate</a>
-                                    <a href="#!">agency</a>
-                                    <a href="#!">portfolio</a>
-                                    <a href="#!">blog</a>
-                                    <a href="#!">elegant</a>
-                                    <a href="#!">professional</a>
-                                    <a href="#!">business</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="single_f_widget m-t-3 wow fadeInUp">
-                                <h4 class="text-lowercase">Flicker Posts</h4>
-                                <div class="single_f_widget_text f_flicker">
-                                    <img src="static/img/flipcker1.jpg" alt="" />
-                                    <img src="static/img/flipcker2.jpg" alt="" />
-                                    <img src="static/img/flipcker3.jpg" alt="" />
-                                    <img src="static/img/flipcker4.jpg" alt="" />
-                                    <img src="static/img/flipcker3.jpg" alt="" />
-                                    <img src="static/img/flipcker2.jpg" alt="" />
-                                    <img src="static/img/flipcker4.jpg" alt="" />
-                                    <img src="static/img/flipcker1.jpg" alt="" />
+                                    <a href="#!">Machine Learning</a>
+                                    <a href="#!">Artificial Intelligence</a>
+                                    <a href="#!">Feedback Assistant</a>
+                                    <a href="#!">Face Recognition</a>
+                                    <a href="#!">Neural Network</a>
+                                    <a href="#!">KNN Classifier</a>
+                                    <a href="#!">AI Model</a>
                                 </div>
                             </div>
                         </div>
@@ -1002,7 +179,7 @@
                     <div class="row">
                         <div class="col-sm-6 col-xs-12">
                             <div class="copyright_text m-t-2 text-xs-center">
-                                <p class="wow zoomIn" data-wow-duration="1s">Made with <i class="fa fa-heart"></i> by <a target="_black" href="http://bootstrapthemes.co"> Bootstrap Themes</a> 2016. All Rights Reserved</p>
+                                <p class="wow zoomIn" data-wow-duration="1s">Made with <i class="fa fa-heart"></i> by <a target="_black" href="http://bootstrapthemes.co"> Team Dynamic</a> 2021. All Rights Reserved</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
