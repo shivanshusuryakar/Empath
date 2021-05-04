@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Analysis using the Model</title>
-</head>
-<body>
-<p>Your file has been successfully uploaded!</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block body %}
+
+<div id="home" class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="static/img/homebenner.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                        <div class="single_home">
+                            <h1>Feedback</h1>
+                            <p>Your file has successfully uploaded!</p>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+</div>
+
+{% endblock body %}

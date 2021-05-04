@@ -4,7 +4,6 @@ import os
 
 def index(request):
     return(render(request,"index.html"))
-
 def modelform(request):
 
     try:

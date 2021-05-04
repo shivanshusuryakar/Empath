@@ -5,23 +5,23 @@
     @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
 .frame {
-	position: relative;
-	top: 50%;
+	position: absolute;
+	top: 30%;
 	left: 50%;
 	width: 400px;
 	height: 400px;
-	margin-top: 20vh;
+	margin-top: 0;
 	margin-left: -200px;
 	border-radius: 2px;
 	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
 	overflow: hidden;
-	background: linear-gradient(to top right, darkmagenta 0%, hotpink 100%);
+	background: linear-gradient(to top right, rgb(243,46,105) 0%, rgb(247,106,149) 100%);
 	color: #333;
 	font-family: "Open Sans", Helvetica, sans-serif;
 }
 
 .center {
-	position: relative;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -56,14 +56,17 @@ h1 {
 	border: 1px dashed #999;
 	border-radius: 3px;
 	text-align: center;
+	pading:10px;
 }
 
 .upload-icon {
 	margin: 25px 2px 2px 2px;
+
+
 }
 
 .upload-input {
-	position: relative;
+	position: absolute;
 	top: -62px;
 	left: 0;
 	width: 100%;
@@ -75,50 +78,50 @@ h1 {
 	display: block;
 	width: 140px;
 	height: 40px;
-	background: darkmagenta;
+	background: rgb(233,46,107);
 	color: #fff;
 	border-radius: 3px;
 	border: 0;
-	box-shadow: 0 3px 0 0 hotpink;
+	box-shadow: 0 3px 0 0 rgb(184,71,102);;
 	transition: all 0.3s ease-in-out;
 	font-size: 14px;
 }
 
 .btn:hover {
-	background: rebeccapurple;
-	box-shadow: 0 3px 0 0 deeppink;
+	background: rgb(220,63,67);
+	box-shadow: 0 3px 0 0 rgb(184,71,102);;
 }
-
+body {
+ background-image: url("static/img/homebenner.jpg");
+ background-color: #cccccc;
+ background-position:center;
+}
 </style>
 
-<div style="position:relative;margin-bottom:20vh;">
+<div id="home" class="slider">
+    <img src="static/img/homebenner.jpg">
+
+<div class="caption center-align">
 
 
-<form method="POST"  enctype="multipart/form-data" action="model">
-    {% csrf_token %}
-    <div class="frame">
-	    <div class="center">
-            <div class="title1">
-                <h1>Drop file to upload</h1>
-            </div>
+                    <form method="POST"  enctype="multipart/form-data" action="model">
+                    {% csrf_token %}
+                        <div class="frame">
+                            <div class="center">
+                                <div class="title1">
+                                    <h1>Drop file to upload</h1>
+                                </div>
 
-            <div class="dropzone">
-                <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-                <input type="file" class="upload-input" accept="image/*" name="inpfile" />
-            </div>
+                                <div class="dropzone">
+                                    <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+                                    <input type="file" class="upload-input" accept="image/*" name="inpfile" />
+                                </div>
+                                {{ filename }}
+                                <button type="submit" class="btn" name="uploadbutton">Upload Image</button>
 
-            <button type="submit" class="btn" name="uploadbutton">Upload Image</button>
-
-	    </div>
-    </div>
-</form>
-
+                            </div>
+                        </div>
+                    </form>
 </div>
-
-
-
-
-
-
-
+</div>
 {% endblock body %}
