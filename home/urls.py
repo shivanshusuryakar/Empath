@@ -6,6 +6,7 @@ urlpatterns=[
     path("",views.index,name="index"),
     path("model",views.modelform,name="modelform"),
     path("result",views.result,name="result"),
+    path("Calculate",views.Calc)
 ]
 
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -9,7 +9,11 @@
                         <div class="single_home">
                             <h1>Feedback</h1>
                             <p>Your file has successfully uploaded!</p>
-
+                            <form action="Calculate">
+                                {% csrf_token %}
+                                <button type="submit">Calculate</button>
+                            </form>
+                            {{OUTSTRING}}
                         </div>
                     </div>
                 </li>
